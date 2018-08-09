@@ -1,0 +1,23 @@
+$color__white: #FFFFFF;
+$color__green--dark: #4AA128;
+$color__orange--dark: #D69037;
+
+.custom-green-table {
+    max-width: 440px;
+    background: $color__white !important;
+    th {
+        font-weight: bold;
+    }
+    th,
+    td {
+        border: 2px solid $color__green--dark !important;
+    }
+}
+
+.custom-orange-table {
+    background: $color__white !important;
+    border: 3px solid $color__orange--dark !important;
+    td {
+        border: 2px solid $color__orange--dark !important;
+    }
+}

@@ -1,0 +1,257 @@
+/** main content styles **/
+
+.activity-container {
+    @include clearfix();
+    position: relative;
+    height: 100vh;
+    padding-top: $main_container_padding;
+    padding-left: $main_container_padding;
+    padding-right: $main_container_padding;
+    background-color: $background_color;
+    &.captions-active {
+        .activity {
+            padding-bottom: $main_container_padding + ($navigation_bar_height * 2);
+        }
+    }
+    .activity {
+        @include clearfix();
+        position: relative;
+        height: 100vh;
+        padding-bottom: $main_container_padding + $navigation_bar_height + $border_mask;
+        transition: .5s all ease;
+    }
+    .activity-wrapper {
+        @include clearfix();
+        height: 100%;
+        overflow: hidden;
+        .activity-content-area {
+            @include clearfix();
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+/** content structure **/
+
+.column-generic {
+    @include clearfix();
+    position: relative;
+    height: 100%;
+    .activity-slides-area {
+        @include clearfix();
+    }
+    .acitvity-slide {
+        @include clearfix();
+    }
+}
+
+.activity-slide-custom {
+    font-size: $custom_side_text !important;
+}
+
+// left column
+.scrollable {
+    @include clearfix();
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.column-right {
+    margin-left: .5em;
+}
+
+.column-left {
+    margin-right: .5em;
+}
+
+.column-left,
+.column-right {
+    @extend .column-generic;
+}
+
+.column-left.scroll {
+    .column-container-left {
+        @extend .scrollable;
+    }
+}
+
+.column-right.scroll {
+    .column-container-right {
+        @extend .scrollable;
+    }
+}
+
+/** layouts **/
+
+// One column
+.column-unique {
+    flex-grow: 1;
+    position: relative;
+    &.fixed,
+    &.scrollable {
+        @extend .scrollable;
+        height: auto;
+    }
+}
+
+.row-left,
+.row-right {
+    @extend .column-unique;
+}
+
+.row-right.scroll {
+    .column-container-right {
+        @extend .scrollable;
+    }
+}
+
+.row-left.scroll {
+    .column-container-left {
+        @extend .scrollable;
+    }
+}
+
+// Two rows
+.row-top,
+.row-bottom {
+    flex-basis: 100%;
+    flex-grow: 1;
+    flex-shrink: 0;
+    &.fixed,
+    &.scrollable {
+        height: auto;
+    }
+}
+
+.row-top {
+    margin-bottom: 10px;
+}
+
+// Two columns
+.column-left,
+.column-right {
+    flex-basis: 50%;
+    flex-grow: 1;
+    &.fixed {
+        height: auto;
+    }
+    &.scrollable {
+        height: auto;
+    }
+}
+
+// Two columns; left strait and right wide
+.column-strait-left {
+    flex-basis: 30%;
+}
+
+.column-wide-right {
+    flex-basis: 70%;
+}
+
+.column-strait-left,
+.column-wide-right {
+    &.fixed {
+        height: auto;
+    }
+    &.scrollable {
+        height: auto;
+    }
+}
+
+body,
+.fixed {
+    overflow: hidden;
+}
+
+.scrollable {
+    position: absolute;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.column-container-center {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.activity-start-screen button.start-btn {
+    background-color: transparent;
+    border-color: transparent;
+    max-width: 50%;
+}
+
+.activity-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    height: auto;
+    z-index: 99999;
+    background-color: $navigation_bar_color;
+    border-top: $navigation_bar_border;
+    max-height: $navigation_bar_height;
+    min-height: $navigation_bar_height;
+    padding: $navigation_bar_aside_padding;
+    box-shadow: inset 0 3px 3px -3px rgba(0, 0, 0, 0.1);
+    .group {
+        flex-basis: $navigation_group_size;
+        display: flex;
+        align-items: center;
+        &:first-child {
+            justify-content: flex-start;
+        }
+        &:last-child {
+            justify-content: flex-end;
+        }
+        &.group-center {
+            justify-content: center;
+        }
+        >span,
+        >div,
+        >button {
+            margin-left: 1em;
+        }
+        >span:first-child,
+        >div:first-child,
+        >button:first-child {
+            margin-left: 0;
+        }
+    }
+}
+
+.activity-navigation-container {
+    height: 60px;
+    /*margin:0px 76px;*/
+    position: absolute;
+    margin: 0;
+}
+
+.activity-navigation-container .activity-navigation-container-left-elements {
+    position: absolute;
+    bottom: 8px;
+    left: 0px;
+    height: 48px;
+}
+
+.activity-navigation-container .activity-navigation-container-right-elements {
+    position: absolute;
+    bottom: 8px;
+    right: 0px;
+    height: 48px;
+}
+
+.activity-navigation-container .btn {
+    vertical-align: top;
+}

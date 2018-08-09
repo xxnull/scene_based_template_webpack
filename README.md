@@ -1,0 +1,1 @@
+# Scene based template for webpack, using bootstrap and jquery

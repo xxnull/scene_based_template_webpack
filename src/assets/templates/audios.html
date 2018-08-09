@@ -1,0 +1,13 @@
+<!-- audio template -->
+<script id="audios-template" type="text/html">
+    <div class="audio-block english" tabindex="0">
+        <% _.each(explorations, function(exploration, key) { %>
+            <audio class="activity-audio" data-slide="<%= (key + 1) %>" src="<%= exploration.audio_en %>"></audio>
+        <% }); %>
+    </div>
+    <div class="audio-block spanish" tabindex="0">
+        <% _.each(explorations, function(exploration, key) { %>
+            <audio class="activity-audio" data-slide="<%= (key + 1) %>" src="<%= exploration.audio_sp %>"></audio>
+        <% }); %>
+    </div>
+</script>

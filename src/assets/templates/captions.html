@@ -1,0 +1,8 @@
+<!-- captions template -->
+<script id="captions-template" type="text/html">
+    <div class="row activity-audio-caption captions">
+        <% _.each(explorations, function(exploration, key) { %>
+            <div class="slide-audio col-sm-12" data-slide="<%= (key + 1) %>" tabindex="0"><%= exploration.text %></div>
+        <% }); %>
+    </div>
+</script>

@@ -1,0 +1,44 @@
+.learnosity-custom-question .lrn_widget.lrn_custom .lrn_response_wrapper {
+  max-width: fit-content;
+  position: inherit;
+
+  .lrn_response {
+      border-left: solid transparent;
+      border-left-width: 3px;
+      padding-right: 1.5em;
+
+      &.lrn_correct {
+          border-left-color: #65a00d;
+
+          &:before {
+              content: "\E607";
+              color: #65a00d;
+              font-family: LearnosityIconsRegular;
+              padding-right: .2em;
+              position: absolute;
+              top: 50%;
+              -webkit-transform: translateY(-50%);
+              transform: translateY(-50%);
+              font-size: .86em;
+              right: .4em;
+          }
+      }
+
+      &.lrn_incorrect {
+          border-left-color: #e14747;
+
+          &:before {
+              content: "\E608";
+              color: #e14747;
+              font-family: LearnosityIconsRegular;
+              padding-right: .2em;
+              position: absolute;
+              top: 50%;
+              -webkit-transform: translateY(-50%);
+              transform: translateY(-50%);
+              font-size: .86em;
+              right: .4em;
+          }
+      }
+  }
+}

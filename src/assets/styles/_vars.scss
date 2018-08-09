@@ -1,0 +1,50 @@
+// colors
+
+$green: #1e8508;
+// $green: #5cb85c; // by victory
+$white: #fff;
+$gray: #d8d8d8;
+// Main
+$start_background: url('../assets/images/k-5/group-44.png') #d7eeff;
+$background_color: #f9f4e7;
+// Texts
+$general_text_size: 22px !important;
+$title_size: 22px;
+$learnosity_font_size: 22px;
+$buttons_text_size:14px;
+$alt_text_size:19px;
+$custom_side_text: $general_text_size;
+$base_font: SourceSansPro-Bold,Source Sans Pro !important;
+//$base_font: Helvetica Neue,Helvetica,Arial,sans-serif;
+$text_color: $white;
+// Buttons
+$buttons_bg_color: $green;
+$buttons_boder_color: $green;
+$buttons_txt_color: $white !important;
+$button_border_radius: 10px !important;
+$paragraph_line_heigth: 22px !important;
+$buttons_txt_color_no_important: $white;
+$buttons_bg_color_inverted: $white;
+$buttons_txt_color_inverted: $green;
+//---------------------------
+//----- Screen Query
+//---------------------------
+$ipad: 1023px;
+$desktop: 1279px;
+$bigscreens: 1440px;
+// layout:
+$main_container_padding: 1em;
+$navigation_bar_height: 4em;
+$navigation_bar_color:#fffffb;
+$navigation_bar_border: 0px solid #a5ce9f;
+$navigation_bar_aside_padding: 0em $main_container_padding;
+$navigation_group_size: 18em;
+$start_btn_size: 200px;
+$border_mask: .3em;
+// Loader
+$loader_border: 16px solid #f3f3f3;
+$loader_border_top: 16px solid $green;
+$loader_size: 120px;
+
+$iconSize: '5vh';
+$correct_answers_container--background: rgba(0, 0, 0, .05);

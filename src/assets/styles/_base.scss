@@ -1,0 +1,178 @@
+body {
+    font-size: $general_text_size;
+    font-family: $base_font;
+}
+
+p, h3, h5 {
+    font-size: $general_text_size;
+    line-height: $paragraph_line_heigth;
+    font-family: $base_font;
+}
+
+.btn {
+    background-color: $buttons_bg_color;
+    color: $buttons_txt_color;
+    border-radius: $button_border_radius;
+    outline: none !important;
+    padding: 0 !important;
+}
+
+.btn-primary {
+    color: $buttons_txt_color;
+    background-color: transparent!important;
+    color: $buttons_txt_color !important;
+    border: 0px solid $green !important;
+    box-shadow: none;
+    text-shadow: none;
+    color: $green !important;
+}
+
+.btn-done {
+    min-width: 97px;
+    min-height: 26px;
+    background-color: $buttons_bg_color !important;
+    color: $buttons_txt_color !important;
+    border-color: $buttons_boder_color !important;
+    text-transform: uppercase;
+}
+
+.btn-done:disabled {
+    background-color: $gray !important;
+}
+
+.activity-start-screen,
+.loading-screen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    background: $start_background;
+    padding-bottom: $navigation_bar_height;
+    z-index: 10;
+}
+
+.loading-screen .loader {
+    margin: auto;
+    border-radius: 50%;
+    width: $loader_size;
+    height: $loader_size;
+    background: url("../assets/images/loader_rolling.gif");
+}
+
+// .activity-start-screen button.start-btn {
+//     height: $start_btn_size;
+// }
+
+.footer-bar {
+    bottom: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 999999 !important;
+    &.masked {
+        border-top: $border_mask solid #faf4e8;
+    }
+}
+
+.nav-col1 {
+    padding: 30px;
+    width: 33%;
+    float: left;
+    padding-top: 10px;
+}
+
+.no-padding {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.text-right {
+    text-align: right;
+    width: 33%;
+    float: left;
+}
+
+.btn-primary.outline:hover,
+.btn-primary.outline:focus,
+.btn-primary.outline:active,
+.btn-primary.outline.active,
+.open>.dropdown-toggle.btn-primary {
+    color: $buttons_bg_color;
+    border-color: $buttons_bg_color;
+}
+
+.btn-primary.outline:active,
+.btn-primary.outline.active {
+    border-color: $buttons_bg_color;
+    color: $buttons_bg_color;
+    box-shadow: none;
+}
+
+.btn-success {
+    color: $buttons_txt_color;
+    background-color: $green;
+    border-color: $buttons_boder_color;
+}
+
+.button_container {
+    display: block;
+    margin: 30px;
+    margin-right: 10px;
+    margin-top: 15px;
+}
+
+.glyphicon {
+    font-size: 42px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.glyphicon-comment {
+    font-size: 32px !important;
+}
+
+.check-block {
+    @include clearfix();
+}
+
+.check-block button {
+    display: block;
+    margin: 0;
+    font-size: $buttons_text_size;
+    padding-left: 14px;
+    padding-right: 14px;
+    margin-left: 2px;
+    padding-top: 4px !important;
+    margin-bottom: 1.5em;
+    float: left;
+}
+
+.btn-next.disabled,
+.btn-next.disabled:hover,
+.btn-check.disabled {
+    background-color: $gray !important;
+}
+
+img {
+    outline: none !important
+}
+
+
+.defaultstyle {
+    border: none !important;
+    outline: none !important;
+}
+
+.flexclass{
+    padding:0 !important;
+    margin:0 !important;
+}
+
+div[class^="flexclass"], div[class*=" col-xs-"] {
+    padding:0 !important;
+    margin:0 !important;
+}
+

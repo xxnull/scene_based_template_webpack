@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>
+        <%= htmlWebpackPlugin.options.title %>
+    </title>
+
+</head>
+
+<body>
+    <div class="activity-container">
+        <div class="loading-screen">
+            <div class="loader"></div>
+        </div>
+        <div class="activity-start-screen" style="display: none;">
+            <span class="start-btn" role="button" tabindex="0">
+                <img src="../assets/images/k-5/play-button-new.png" alt="start button" width="228" height="228">
+            </span>
+        </div>
+        <div class="activity th-k-5" style="display:none;">
+            <div class="activity-wrapper">
+                <!-- slides area -->
+                <div class="activity-content-area">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer menu area -->
+    <div class="footer-bar" style="display:none;">
+        <div class="activity-navigation">
+            <%= require('html-loader!./assets/templates/nav.html') %>
+        </div>
+    </div>
+    <script src="https://static.bigideasmath.com/lgen/learnosityHandler.js"></script>
+
+    <!-- templates area -->
+    <%= require('html-loader!./assets/templates/audios.html') %>
+    <%= require('html-loader!./assets/templates/captions.html') %>
+    <%= require('html-loader!./assets/templates/activity_content_area.html') %>
+    <%= require('html-loader!./assets/templates/activity_slide.html') %>
+    <%= require('html-loader!./' + htmlWebpackPlugin.options.directory + '/activity.html') %>
+</body>
+
+</html>

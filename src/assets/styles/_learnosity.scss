@@ -1,0 +1,214 @@
+/** fonts size styles **/
+
+.lrn .mq-math-mode *,
+.lrn .mq-math-mode :after,
+.lrn .mq-math-mode :before,
+.MathJax span {
+    font-family: $base_font;
+}
+
+.lrn,
+.learnosity-item,
+.lrn h3,
+.lrn h5,
+.lrn_stimulus .lrn_stimulus_content {
+    font-size: $general_text_size;
+    line-height: $paragraph_line_heigth;
+    font-family: $base_font;
+}
+
+/** calculator size styles **/
+
+.lrn_widget .lrn-formula-keyboard-menu {
+    height: 3.21429em !important;
+}
+
+.lrn_widget .lrn-formula-keyboard:not(.standard-styles) {
+    z-index: 999999 !important;
+    min-width: 10em !important;
+    max-width: 10em !important;
+    .lrn-btn-grid-dir .lrn_arrow_left,
+    .lrn-btn-grid-dir .lrn_arrow_right {
+        line-height: 1.2 !important;
+    }
+    .lrn_btn_grid.lrn-btn-grid-num {
+        height: 2.2em !important;
+        line-height: 1.2 !important;
+    }
+    .lrn_btn_grid {
+        height: 2.46em !important;
+        line-height: 1.2 !important;
+    }
+    .lrn-formula-keyboard-menu-right {
+        display: none;
+    }
+}
+
+.lrn_widget {
+    &.lrn_clozeformula,
+    &.lrn_imageclozeassociationV2,
+    &.lrn_imageclozeformula,
+    &.lrn_hotspot,
+    &.lrn_qr.lrn_formulaV2 {
+        .lrn_response_wrapper {
+            margin-top: 0 !important;
+        }
+        .lrn_response_innerbody.lrn-response-validate-wrapper,
+        .lrn_response_input_wrapper,
+        .lrn-response-validate-wrapper {
+            &.lrn_correct,
+            &.lrn_incorrect {
+                border: 0 none;
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+    &.lrn_clozeformula,
+    &.lrn_imageclozeformula,
+    &.lrn_hotspot,
+    &.lrn_qr.lrn_formulaV2 {
+        .lrn_correctAnswers {
+            background: $correct_answers_container--background;
+            margin-top: .4em !important;
+            font-size: .8em;
+            .lrn_correctAnswerList>li {
+                background-color: #FFF;
+            }
+            .lrn_responseIndex {
+                padding: .3em .5em !important;
+            }
+        }
+        .lrn_response_innerbody {
+            &.lrn_correct,
+            &.lrn_incorrect {
+                padding-top: 0 !important;
+            }
+        }
+        .lrn_display_correct_answer_enabled .lrn_textinput.lrn-clozeformula-input .lrn_responseIndex {
+            width: 1.2em !important;
+            left: -1.2em !important;
+        }
+    }
+    &.lrn_hotspot .lrn_correctAnswers {
+        margin-top: 2em !important;
+    }
+}
+
+.lrn_widget.lrn_clozechemistry .lrn_display_correct_answer_enabled .lrn_textinput.lrn-clozeformula-input.lrn_correct,
+.lrn_widget.lrn_clozechemistry .lrn_display_correct_answer_enabled .lrn_textinput.lrn-clozeformula-input.lrn_incorrect,
+.lrn_widget.lrn_clozechemistry .lrn_display_correct_answer_enabled .lrn_textinput.lrn-clozeformula-input.lrn_not_attempted,
+.lrn_widget.lrn_clozeformula .lrn_display_correct_answer_enabled .lrn_textinput.lrn-clozeformula-input.lrn_correct,
+.lrn_widget.lrn_clozeformula .lrn_display_correct_answer_enabled .lrn_textinput.lrn-clozeformula-input.lrn_incorrect,
+.lrn_widget.lrn_clozeformula .lrn_display_correct_answer_enabled .lrn_textinput.lrn-clozeformula-input.lrn_not_attempted {
+    margin-left: 1.2em !important;
+    border-left: none;
+}
+
+.lrn_widget .lrn_correctAnswerList>li {
+    padding: .2em .5em .2em 2em !important;
+}
+
+.lrn_widget .lrn_response_wrapper {
+    max-width: 430px;
+    margin-right: auto;
+}
+
+.lrn_widget {
+    &.lrn_longtextV2 .lrn_texteditor,
+    &.lrn_highlight {
+        .lrn_toolbar {
+            font-size: 16px;
+        }
+        canvas.lrn_canvas.lrn_paintable {
+            background: #FFF;
+        }
+    }
+}
+
+.lrn_widget.lrn_imageclozeassociationV2 .lrn_response_wrapper .lrn_possibilityList.lrn_dragdrop .lrn_btn_drag {
+    min-height: 20px !important;
+    line-height: 1.1;
+    padding: .1em .4em !important;
+    span {
+        margin-left: 0 !important;
+    }
+}
+
+.lrn_widget.lrn_imageclozeassociationV2 .lrn_possibilityList {
+    padding: 0 !important;
+}
+
+.lrn_validatedResponseList {
+    display: none;
+}
+
+.lrn_widget.lrn_imageclozeassociationV2 .lrn_response_input .lrn_dropzones_container .lrn_imagecloze_response .lrn_responseIndex {
+    bottom: auto !important;
+    right: 100% !important;
+    left: auto !important;
+    top: 0 !important;
+}
+
+.lrn_longtextV2 .lrn_stimulus .lrn_stimulus_content {
+    margin-bottom: .3em !important;
+}
+
+.lrn.lrn_widget.lrn_qr.lrn_formulaV2 {
+    margin-right: 1em;
+    .lrn_response_input.lrn_bordered_mathinput.lrn_response_math::before {
+        right: 0 !important;
+        padding-right: 0 !important;
+    }
+    .lrn_response_input_wrapper>.lrn_bordered_mathinput {
+        background: transparent;
+        border: none;
+        &.lrn_incorrect {
+            border-left: 4px solid #e14747;
+            background: #fbe3e3;
+        }
+        &.lrn_correct {
+            border-left: 4px solid #65a00d;
+            background: #ebf6e7;
+        }
+    }
+    .lrn_math_editable.mq-math-mode {
+        padding-top: .5em;
+        padding-bottom: .5em;
+        padding-left: .5em;
+    }
+}
+
+/* Solve bug in floating element (Image tool / Rule) */
+
+.lrn_feature.lrn_imagetool.lrn-float-element {
+    position: fixed;
+}
+
+// simple shading global styles
+.lrn_widget.lrn_simpleshading {
+    padding-top: 0 !important;
+    .lrn_response_wrapper {
+        margin: 0 !important;
+        margin-top: 1.5em !important;
+    }
+    .lrn-shading-wrapper.lrn-response-validate-wrapper {
+        font-size: 40%;
+        padding: .5em;
+        &.lrn_incorrect {
+            border: 2px solid #e24747;
+            background: rgba(226, 71, 71, 0.28);
+        }
+        &.lrn_correct {
+            border: 2px solid #65a00d;
+            background: rgba(101, 160, 13, 0.34901960784313724);
+        }
+        &::after {
+            font-size: 2em;
+        }
+    }
+    .lrn-shading-cell.lrn_valid {
+        background-color: #FFFFFF;
+    }
+}

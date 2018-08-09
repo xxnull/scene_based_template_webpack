@@ -1,0 +1,51 @@
+<!-- activity slide template -->
+<script id="activity-slide-template" type="text/html">
+    <% _.forEach(explorations, function(explorations) { %>
+        <% if (explorations.align === alignFor || alignFor === '__ignore') { %>
+            <div  class="defaultstyle <%= explorations.style %>" data-slide="<%= explorations.data_slide %>" data-after="<%= explorations.data_after %>"  align="<%= explorations.align %>" tabindex="0">
+                
+                <% if (explorations.itemContainer) { %>
+                    <div class="row flexclass <%= explorations.containerClass %>">
+                <% } %>
+
+                    <% if (explorations.withLearnosityItem && explorations.learnosity_id) { %>
+                        <span class="learnosity-item <%= explorations.component %> <%= explorations.learnosityItemClass %>"  data-reference="<%= explorations.learnosity_id %>"></span>
+                    <% } %>
+
+                    <% if (explorations.withLearnosityCustomItem && explorations.learnosity_id) { %>
+                        <div class="learnosity-custom-question" data-reference="<%= explorations.learnosity_id %>">
+                            <div class="learnosity-response question-<%= explorations.learnosity_id %> <%= explorations.learnosityItemClass %>"></div>
+                        </div>
+                    <% } %>
+
+                <% if (explorations.itemContainer) { %>
+                        <div class="<%= explorations.placeholder %> placeholder">
+                            <div class="iconPlace">
+                            </div>
+                        </div>
+                    </div>
+                <% } %> 
+                
+                <% if (explorations.withButtons) { %>
+                    <div class="check-block">
+                        <button class="btn btn-secondary btn-check" id="check_btn" tabindex="0" aria-label="A check answer button">
+                            <i class="icon"></i>
+                            <span>Check</span>
+                        </button>
+                        <button class="btn btn-secondary btn-try-again" id="try_btn" tabindex="0" aria-label="A try again button">
+                            <i class="icon"></i>
+                            <span>Try Again</span>
+                        </button>
+                        <button class="btn btn-secondary btn-show-me" id="show_btn" tabindex="0" aria-label="A show answer button">
+                            <i class="icon"></i>
+                            <span>Show Me</span>
+                        </button>
+                    </div>
+                <% } %> 
+            </div>
+            <% if (explorations.withCustomCode) { %>
+                <%= $('#activity-slide-custom-' + explorations.data_slide).html() %>
+            <% } %>
+        <% } %> 
+    <% }); %>
+</script>

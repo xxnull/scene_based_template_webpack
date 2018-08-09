@@ -1,0 +1,11 @@
+<script id="activity-content-area-template" type="text/html">
+    <% _.each(cells, function(cell, key) { %>
+        <% let widthTag = cell.widthTag !== '' ? '-' + cell.widthTag : '' %>
+        <div class="cell-area <%= cell.type + widthTag + '-' + cell.align + ' ' + cell.content %>">
+            <!-- activity slides area -->
+            <div class="column-container-<%= cell.align%>">
+                <div class="activity-slides-area"></div>
+            </div>
+        </div>
+    <% }); %>
+</script>
